@@ -14,8 +14,9 @@ with open(ruta_del_archivo_yaml, 'r') as archivo_yaml:
 # Modificar o agregar datos
 yaml_user = datos['databaseUser']
 yaml_password = datos['databasePassword']
+yaml_host = datos['host']
 config = {
-    'host': 'localhost',
+    'host': f'{str(yaml_host)}',
     'user': f'{str(yaml_user)}',
     'password': f'{str(yaml_password)}',
     'database': 'ibcapp',

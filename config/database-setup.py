@@ -43,6 +43,7 @@ print("¡Bienvenido a la interfaz de inicio de base de datos!\n")
 print("¡A continuación introduzca su usuario y contraseña proporcionadas\n")
 user = input("user: ")
 password = input("\npassword: ")
+host = input("\nHost (IP): ")
 for i in range(101):
     sys.stdout.write("\rComprobando credenciales: {}%".format(i))
     sys.stdout.flush()
@@ -62,7 +63,7 @@ if(resultado == "¡Conexión exitosa a la base de datos!"):
     # Modificar o agregar datos
     datos['databaseUser'] = f'{user}'
     datos['databasePassword'] = f'{password}'
-
+    datos['host'] = f'{host}'
     # Guardar los cambios en el archivo YAML
     with open(ruta_del_archivo_yaml, 'w') as archivo_yaml:
         yaml.dump(datos, archivo_yaml, default_flow_style=False)
