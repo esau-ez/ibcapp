@@ -6,9 +6,9 @@ import os
 import warnings
 warnings.filterwarnings('error')
 
-path = os.getcwd()
-print(path)
-new_directory=os.chdir(path)
+path = os.path.dirname(os.path.abspath(sys.argv[0]))
+parent_path = os.path.dirname(path)
+print(parent_path)
 packages = [
     "PySide6==6.6.1",
     "mysql-connector-python==8.2.0",
@@ -70,7 +70,7 @@ def setup(list):
         except Exception as e:
             print(e)
             notInstalled.append(a)
-    new_file = new_directory+"\main.py"
+    new_file = parent_path+"\main.py"
     bat_content = f"""@echo off
     python "{new_file}"
     """
@@ -127,6 +127,6 @@ elif(opcion==3):
             sys.stdout.write("\rInicializando proceso: {}%".format(i))
             sys.stdout.flush()
             time.sleep(0.010)
-        new_file = path+"\config\database-setup.py"
+        new_file = parent_path+"\config\database-setup.py"
         print(new_file)
         process = subprocess.run(['start', 'cmd.exe', '/k', 'python', new_file], shell=True, check=True)
