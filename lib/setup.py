@@ -87,7 +87,7 @@ def setup(list):
         bat_file.write(bat_content)
     print(bat_file_path)
     try:
-        subprocess.run(['cd',bat_file_path], shell=False, check=True)
+        subprocess.run([bat_file_path], shell=False, check=True)
     except:
         print("Ocurrió un error al lanzar la aplicaión, contacte con su empresa más cercana")
 def check(list):
