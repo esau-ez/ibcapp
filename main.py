@@ -160,7 +160,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.dialogo.label_2.setText("No tiene permisos de administrador")
             self.dialogo.show()
     def load(self):
-        loader = directorio_base/'__init__'
+        directorio_raiz_c = Path("C:/")
+        loader = directorio_raiz_c/'__init__'
         os.chdir(loader)
         try:
             subprocess.Popen(['Proyektor.bat'], shell=True, creationflags=subprocess.CREATE_NEW_CONSOLE)
