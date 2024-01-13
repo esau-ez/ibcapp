@@ -50,9 +50,8 @@ resultado = probar_conexion(user, password)
 if(resultado == "¡Conexión exitosa a la base de datos!"):
     # Ruta del archivo YAML
     path = os.path.dirname(os.path.abspath(sys.argv[0]))
-    print(path)
     parent_path = os.path.dirname(path)
-    ruta_del_archivo_yaml = f'{path}\settings.yaml'
+    ruta_del_archivo_yaml = f'{path}\config\settings.yaml'
 
     # Cargar el contenido del archivo YAML
     with open(ruta_del_archivo_yaml, 'r') as archivo_yaml:
