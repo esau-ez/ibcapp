@@ -8,7 +8,6 @@ warnings.filterwarnings('error')
 
 path = os.path.dirname(os.path.abspath(sys.argv[0]))
 parent_path = os.path.dirname(path)
-print(parent_path)
 packages = [
     "PySide6==6.6.1",
     "mysql-connector-python==8.2.0",

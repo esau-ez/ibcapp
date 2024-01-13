@@ -30,7 +30,7 @@ class DialogoPregunta(QWidget,Ui_Dialog3):
         self.setupUi(self)
         self.pushButton.clicked.connect(self.actualizar)
     def actualizar(self):
-        path = os.getcwd()
+        path = os.path.dirname(os.path.abspath(sys.argv[0]))
         file = f"{path}/update/actualizar.py"
         try:
             subprocess.Popen(['start', 'cmd', '/k', 'python',file], shell=True, creationflags=subprocess.CREATE_NEW_CONSOLE)
@@ -135,7 +135,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         #Interfaces
         self.dialogo = Dialogo()
         self.dialogopregunta = DialogoPregunta()
-        self.path = os.getcwd()
+        self.path = os.path.dirname(os.path.abspath(sys.argv[0]))
         self.log = ""
         self.time = time.localtime()
         self.time = time.strftime("%H:%M", self.time)
@@ -151,7 +151,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.dialogopregunta.show()
     def loadIBC(self):
         if(authorization_level == 0):
-            path = os.getcwd()
+            path = os.path.dirname(os.path.abspath(sys.argv[0]))
             new_file = path+"\lib\setup.py"
             subprocess.run(['start', 'cmd.exe', '/k', 'python', new_file], shell=True, check=True)
             self.log += f"{self.time} - Se ha ejecutado IBC Doctor\n"

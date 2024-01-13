@@ -1,10 +1,12 @@
 import mysql.connector
 import os
 import yaml
-path = os.getcwd()
+import sys
+path = os.path.dirname(os.path.abspath(sys.argv[0]))
+print(path)
 global config
 
-ruta_del_archivo_yaml = f'{path}\config\settings.yaml'
+ruta_del_archivo_yaml = f'{path}\settings.yaml'
 
 # Cargar el contenido del archivo YAML
 with open(ruta_del_archivo_yaml, 'r') as archivo_yaml:
