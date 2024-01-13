@@ -20,7 +20,7 @@ accept = input("\n\n¿Está seguro de actualizar la aplicación? (s/n): ")
 if (accept == "s"):
     comando = f"rmdir /s /q C:\ibcapp"
     try:
-        comando = f"git clone 'https://github.com/esau-ez/ibcapp' 'c:/ibcapp'"
+        comando = "git clone https://github.com/esau-ez/ibcapp C:\ibcapp"
         subprocess.run(comando, shell=False)
         for i in range(101):
             sys.stdout.write("\rDescargando actualización: {}%".format(i))
