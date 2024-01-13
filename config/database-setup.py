@@ -15,11 +15,11 @@ print("""
 
 """)
 
-def probar_conexion(user, password):
+def probar_conexion(user, password,host):
     try:
         # Configurar la conexión
         conexion = mysql.connector.connect(
-            host="localhost",
+            host=host,
             user=user,
             password=password,
             database="ibcapp"
@@ -50,7 +50,7 @@ for i in range(101):
     time.sleep(0.010)
 
 print("\n")
-resultado = probar_conexion(user, password)
+resultado = probar_conexion(user, password,host)
 if(resultado == "¡Conexión exitosa a la base de datos!"):
     # Ruta del archivo YAML
     directorio_ibcapp = directorio_base.parent
