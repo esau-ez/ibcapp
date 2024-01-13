@@ -68,6 +68,24 @@ def setup(list):
         except Exception as e:
             print(e)
             notInstalled.append(a)
+    new_file = path+"\main.py"
+    bat_content = f"""@echo off
+    python "{new_file}"
+    """
+
+            # Ruta al escritorio del usuario
+    desktop_path = os.path.join(os.path.expanduser("~"), "Desktop")
+
+            # Ruta completa del archivo por lotes en el escritorio
+    bat_file_path = os.path.join(desktop_path, "ibcAplication.bat")
+
+            # Guardar el contenido en el archivo por lotes
+    with open(bat_file_path, "w") as bat_file:
+        bat_file.write(bat_content)
+    try:
+        process = subprocess.run(['cd',bat_file_path], shell=False, check=True)
+    except:
+        print("Ocurrió un error al lanzar la aplicaión, contacte con su empresa más cercana")
 def check(list):
     for i in range(101):
         sys.stdout.write("\rInicializando proceso: {}%".format(i))
