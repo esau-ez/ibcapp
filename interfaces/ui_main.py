@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainpRmQuY.ui'
+## Form generated from reading UI file 'mainZTudNt.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.6.1
 ##
@@ -596,7 +596,7 @@ class Ui_MainWindow(object):
         self.label_12.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><br/></p></body></html>", None))
         self.pushButton.setText(QCoreApplication.translate("MainWindow", u"IBC Doctor", None))
         self.pushButton_2.setText(QCoreApplication.translate("MainWindow", u"Reiniciar Proyecci\u00f3n", None))
-        self.pushButton_4.setText(QCoreApplication.translate("MainWindow", u"Guardar Datos", None))
+        self.pushButton_4.setText(QCoreApplication.translate("MainWindow", u"Actualizar App", None))
         self.pushButton_5.setText(QCoreApplication.translate("MainWindow", u"Iniciar Proyecci\u00f3n", None))
         self.plainTextEdit.setPlainText("")
     # retranslateUi

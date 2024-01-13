@@ -738,7 +738,7 @@ border: 2px solid #5c55e9</string>
      </rect>
     </property>
     <property name="text">
-     <string>Guardar Datos</string>
+     <string>Actualizar App</string>
     </property>
     <property name="icon">
      <iconset resource="../resources.qrc">

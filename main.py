@@ -32,7 +32,7 @@ class DialogoPregunta(QWidget,Ui_Dialog3):
         self.pushButton.clicked.connect(self.actualizar)
     def actualizar(self):
         path = os.getcwd()
-        file = f"{path}\update\actualizar.py"
+        file = f"{path}/update/actualizar.py"
         try:
             subprocess.Popen(['start', 'cmd', '/k', 'python',file], shell=True, creationflags=subprocess.CREATE_NEW_CONSOLE)
             sys.exit()
@@ -147,7 +147,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.pushButton_5.clicked.connect(self.load)
         self.pushButton_2.clicked.connect(self.restart)
         self.pushButton.clicked.connect(self.loadIBC)
-        self.pushButton.clicked.connect(self.actualizar)
+        self.pushButton_4.clicked.connect(self.actualizar)
     def actualizar(self):
         self.dialogopregunta.show()
     def loadIBC(self):
