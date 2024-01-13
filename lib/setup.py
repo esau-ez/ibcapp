@@ -69,6 +69,7 @@ def setup(list):
             print(e)
             notInstalled.append(a)
     path = os.getcwd()
+    print(path)
     new_file = path+"\main.py"
     bat_content = f"""@echo off
     python "{new_file}"
