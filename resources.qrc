@@ -1,0 +1,52 @@
+<RCC>
+  <qresource prefix="Icons">
+    <file>assets/Icons/exclamacion.png</file>
+    <file>assets/Icons/comprobacion-de-usuario.png</file>
+    <file>assets/Icons/en.png</file>
+    <file>assets/Icons/energia.png</file>
+    <file>assets/Icons/mundo.png</file>
+    <file>assets/Icons/flecha-derecha.png</file>
+    <file>assets/Icons/cheque-de-boleta.png</file>
+    <file>assets/Icons/comenta-alt-check.png</file>
+    <file>assets/Icons/lado-del-camion.png</file>
+    <file>assets/Icons/actualizar.png</file>
+    <file>assets/Icons/agregar.png</file>
+    <file>assets/Icons/agregar-usuario.png</file>
+    <file>assets/Icons/ajustes.png</file>
+    <file>assets/Icons/almuerzo-cohete.png</file>
+    <file>assets/Icons/angulo-derecho.png</file>
+    <file>assets/Icons/angulo-izquierdo.png</file>
+    <file>assets/Icons/basura.png</file>
+    <file>assets/Icons/bulbo.png</file>
+    <file>assets/Icons/busqueda.png</file>
+    <file>assets/Icons/calendario.png</file>
+    <file>assets/Icons/cerrar.png</file>
+    <file>assets/Icons/comentario.png</file>
+    <file>assets/Icons/corazon (1).png</file>
+    <file>assets/Icons/corazon.png</file>
+    <file>assets/Icons/cuota.png</file>
+    <file>assets/Icons/desbloquear.png</file>
+    <file>assets/Icons/descargar.png</file>
+    <file>assets/Icons/dolar.png</file>
+    <file>assets/Icons/estrella (1).png</file>
+    <file>assets/Icons/estrella.png</file>
+    <file>assets/Icons/hogar.png</file>
+    <file>assets/Icons/imagen.png</file>
+    <file>assets/Icons/lapiz.png</file>
+    <file>assets/Icons/lectura-de-codigo-de-barras (1).png</file>
+    <file>assets/Icons/llave.png</file>
+    <file>assets/Icons/marcador (1).png</file>
+    <file>assets/Icons/marcador.png</file>
+    <file>assets/Icons/mas.png</file>
+    <file>assets/Icons/menu-hamburguesa.png</file>
+    <file>assets/Icons/monedas.png</file>
+    <file>assets/Icons/sobre.png</file>
+    <file>assets/Icons/tornillo.png</file>
+    <file>assets/Icons/usuario.png</file>
+  </qresource>
+  <qresource prefix="img">
+    <file>assets/img/Logo Azul.png</file>
+    <file>assets/img/Logo.png</file>
+    <file>assets/img/Logo.svg</file>
+  </qresource>
+</RCC>
