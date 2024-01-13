@@ -2,7 +2,8 @@ import os
 import sys
 import time
 import subprocess
-path = os.getcwd()
+from pathlib import Path
+directorio_base = Path(__file__).resolve().parent
 print("""
  ___ ____   ____   ____             _             
 |_ _| __ ) / ___| |  _ \  ___   ___| |_ ___  _ __ 
@@ -17,15 +18,20 @@ for i in range(101):
     time.sleep(0.025)
 accept = input("\n\n¿Está seguro de actualizar la aplicación? (s/n): ")
 if (accept == "s"):
+    directorio_raiz_c = Path("C:/")
+    path = directorio_raiz_c/'ibcapp'
+    print(path)
+    comando = f"rmdir /s /q {path}"
     try:
-        comando = f"git pull origin master"
+        comando = f"git clone 'https://github.com/esau-ez/ibcapp' 'c:/ibcapp'"
         subprocess.run(comando, shell=False)
         for i in range(101):
             sys.stdout.write("\rDescargando actualización: {}%".format(i))
             sys.stdout.flush()
             time.sleep(0.5)
         print("\nLa aplicación se ha actualizado correctamente")
-        new_file = path+"\main.py"
+        directorio_ibcapp = directorio_base.parent
+        new_file = directorio_ibcapp / 'main.py'
         process = subprocess.run(['python', new_file], shell=False, check=True)
         sys.exit()
     except Exception as e:

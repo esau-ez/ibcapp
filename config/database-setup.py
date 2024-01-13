@@ -3,6 +3,9 @@ import time
 import mysql.connector
 import yaml
 import os
+from pathlib import Path
+global directorio_base
+directorio_base = Path(__file__).resolve().parent
 print("""
  ___ ____   ____   ____             _             
 |_ _| __ ) / ___| |  _ \  ___   ___| |_ ___  _ __ 
@@ -49,9 +52,8 @@ print("\n")
 resultado = probar_conexion(user, password)
 if(resultado == "¡Conexión exitosa a la base de datos!"):
     # Ruta del archivo YAML
-    path = os.path.dirname(os.path.abspath(sys.argv[0]))
-    parent_path = os.path.dirname(path)
-    ruta_del_archivo_yaml = f'{path}\config\settings.yaml'
+    directorio_ibcapp = directorio_base.parent
+    ruta_del_archivo_yaml = directorio_ibcapp /'config'/'settings.yaml'
 
     # Cargar el contenido del archivo YAML
     with open(ruta_del_archivo_yaml, 'r') as archivo_yaml:
@@ -66,7 +68,7 @@ if(resultado == "¡Conexión exitosa a la base de datos!"):
         yaml.dump(datos, archivo_yaml, default_flow_style=False)
     print("\nTodo funcionó correctamente. Programa listo para ser ejecutado")
     time.sleep(3)
-    exit()
+    sys.exit()
 else:
     print("\nError ocurrido, revise dependencias")
     time.sleep(3)

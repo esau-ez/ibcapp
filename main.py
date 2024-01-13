@@ -8,12 +8,14 @@ from interfaces.ui_dialogopregunta import Ui_Dialog3
 from config.db_script import consulta, add
 
 #Librerias extras
+from pathlib import Path
 import sys
 import os
 import subprocess
 import requests
 import time
 import re
+directorio_base = Path(__file__).resolve().parent
 class Dialogo(QWidget, Ui_Dialog):
     def __init__(self):
         super().__init__()
@@ -30,8 +32,8 @@ class DialogoPregunta(QWidget,Ui_Dialog3):
         self.setupUi(self)
         self.pushButton.clicked.connect(self.actualizar)
     def actualizar(self):
-        path = os.path.dirname(os.path.abspath(sys.argv[0]))
-        file = f"{path}/update/actualizar.py"
+
+        file = directorio_base/'update'/'actualizar.py'
         try:
             subprocess.Popen(['start', 'cmd', '/k', 'python',file], shell=True, creationflags=subprocess.CREATE_NEW_CONSOLE)
             sys.exit()
@@ -135,7 +137,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         #Interfaces
         self.dialogo = Dialogo()
         self.dialogopregunta = DialogoPregunta()
-        self.path = os.path.dirname(os.path.abspath(sys.argv[0]))
         self.log = ""
         self.time = time.localtime()
         self.time = time.strftime("%H:%M", self.time)
@@ -151,8 +152,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.dialogopregunta.show()
     def loadIBC(self):
         if(authorization_level == 0):
-            path = os.path.dirname(os.path.abspath(sys.argv[0]))
-            new_file = path+"\lib\setup.py"
+            new_file = directorio_base/'lib'/'setup.py'
             subprocess.run(['start', 'cmd.exe', '/k', 'python', new_file], shell=True, check=True)
             self.log += f"{self.time} - Se ha ejecutado IBC Doctor\n"
             self.plainTextEdit.setPlainText(self.log)
@@ -160,7 +160,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.dialogo.label_2.setText("No tiene permisos de administrador")
             self.dialogo.show()
     def load(self):
-        loader = self.path+"\__init__"
+        loader = directorio_base/'__init__'
         os.chdir(loader)
         try:
             subprocess.Popen(['Proyektor.bat'], shell=True, creationflags=subprocess.CREATE_NEW_CONSOLE)
