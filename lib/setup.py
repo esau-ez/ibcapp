@@ -82,8 +82,9 @@ def setup(list):
             # Guardar el contenido en el archivo por lotes
     with open(bat_file_path, "w") as bat_file:
         bat_file.write(bat_content)
+    print(bat_file_path)
     try:
-        process = subprocess.run(['cd',bat_file_path], shell=False, check=True)
+        subprocess.run(['cd',bat_file_path], shell=False, check=True)
     except:
         print("Ocurrió un error al lanzar la aplicaión, contacte con su empresa más cercana")
 def check(list):
