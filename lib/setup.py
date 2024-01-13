@@ -68,6 +68,7 @@ def setup(list):
         except Exception as e:
             print(e)
             notInstalled.append(a)
+    path = os.getcwd()
     new_file = path+"\main.py"
     bat_content = f"""@echo off
     python "{new_file}"
