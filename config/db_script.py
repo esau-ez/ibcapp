@@ -6,7 +6,6 @@ from pathlib import Path
 global config
 directorio_base = Path(__file__).resolve().parent
 ruta_del_archivo_yaml = f'{directorio_base}\settings.yaml'
-print(ruta_del_archivo_yaml)
 # Cargar el contenido del archivo YAML
 with open(ruta_del_archivo_yaml, 'r') as archivo_yaml:
     datos = yaml.safe_load(archivo_yaml)

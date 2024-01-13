@@ -73,4 +73,4 @@ if(resultado == "¡Conexión exitosa a la base de datos!"):
 else:
     print("\nError ocurrido, revise dependencias")
     time.sleep(3)
-    exit()
+    sys.exit()

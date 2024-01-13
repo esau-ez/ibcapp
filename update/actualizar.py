@@ -18,10 +18,7 @@ for i in range(101):
     time.sleep(0.025)
 accept = input("\n\n¿Está seguro de actualizar la aplicación? (s/n): ")
 if (accept == "s"):
-    directorio_raiz_c = Path("C:/")
-    path = directorio_raiz_c/'ibcapp'
-    print(path)
-    comando = f"rmdir /s /q {path}"
+    comando = f"rmdir /s /q C:\ibcapp"
     try:
         comando = f"git clone 'https://github.com/esau-ez/ibcapp' 'c:/ibcapp'"
         subprocess.run(comando, shell=False)

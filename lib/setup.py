@@ -130,5 +130,5 @@ elif(opcion==3):
             time.sleep(0.010)
         directorio_ibcapp = directorio_base.parent
         new_file = directorio_ibcapp / 'config'/'database-setup.py'
-        print(new_file)
         process = subprocess.run(['start', 'cmd.exe', '/k', 'python', new_file], shell=True, check=True)
+        sys.exit()
