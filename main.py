@@ -1,5 +1,4 @@
 from PySide6.QtWidgets import QApplication, QMainWindow,QWidget
-from PySide6.QtCore import Signal, Qt
 #Interfaces
 from interfaces.ui_main import Ui_MainWindow
 from interfaces.ui_login import Ui_Form
