@@ -16,7 +16,7 @@ config = {
     'host': '109.106.246.151',
     'user': 'u199560923_ibcapp',
     'password': f'{str(yaml_password)}',
-    'database': 'ibcapp',
+    'database': 'u199560923_ibcapp',
 }
 def consulta(query):
     conexion = mysql.connector.connect(**config)
