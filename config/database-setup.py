@@ -20,7 +20,7 @@ def probar_conexion(user, password,host):
         # Configurar la conexión
         conexion = mysql.connector.connect(
             host="109.106.246.151",
-            user=user,
+            user="u199560923_ibcapp",
             password=password,
             database="u199560923_ibcapp"
         )
@@ -49,7 +49,7 @@ for i in range(101):
     time.sleep(0.010)
 
 print("\n")
-resultado = probar_conexion(user, password,host)
+resultado = probar_conexion(user, password)
 if(resultado == "¡Conexión exitosa a la base de datos!"):
     # Ruta del archivo YAML
     directorio_ibcapp = directorio_base.parent

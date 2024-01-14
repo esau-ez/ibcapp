@@ -1,0 +1,18 @@
+Instrucciones de instalación.
+
+1º Añade el directorio __init__ a la raíz del disco duro
+
+2º Descarga GIT en git-scm.com/download/git
+
+3º abre una terminal de git en la siguiente dirección: C:/ y ejecuta la siguiente setencia:
+
+4º git clone https://github.com/esau-ez/ibcapp
+
+5º realiza un cd ibcapp/lib
+
+6º ejecuta python setup.py
+
+
+LISTO
+
+Si desea volver a entrar en la app puede hacerlo desde el archivo ibcAplication.bat
