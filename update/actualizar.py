@@ -27,6 +27,7 @@ if (accept == "s"):
             sys.stdout.flush()
             time.sleep(0.5)
         print("\nLa aplicación se ha actualizado correctamente")
+        print("Por favor, ejecute el archivo setup.py para poder reestablecer la aplicación\n")
         directorio_ibcapp = directorio_base.parent
         new_file = directorio_ibcapp / 'main.py'
         process = subprocess.run(['python', new_file], shell=False, check=True)
