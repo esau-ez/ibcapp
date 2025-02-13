@@ -19,10 +19,10 @@ def probar_conexion(user, password):
     try:
         # Configurar la conexión
         conexion = mysql.connector.connect(
-            host="109.106.246.151",
+            host="92.113.22.15",
             user=user,
             password=password,
-            database="u199560923_ibcapp"
+            database="u555377578_ibcapp"
         )
 
         # Comprobar si la conexión fue exitosa
