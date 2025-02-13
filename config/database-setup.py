@@ -15,12 +15,12 @@ print("""
 
 """)
 
-def probar_conexion(password):
+def probar_conexion(user, password):
     try:
         # Configurar la conexión
         conexion = mysql.connector.connect(
             host="109.106.246.151",
-            user="u199560923_ibcapp",
+            user=user,
             password=password,
             database="u199560923_ibcapp"
         )
@@ -41,6 +41,7 @@ def probar_conexion(password):
 
 print("¡Bienvenido a la interfaz de inicio de base de datos!\n")
 print("¡A continuación introduzca su usuario y contraseña proporcionadas\n")
+user = input("\nUsername: ")
 password = input("\npassword: ")
 for i in range(101):
     sys.stdout.write("\rComprobando credenciales: {}%".format(i))
@@ -48,7 +49,7 @@ for i in range(101):
     time.sleep(0.010)
 
 print("\n")
-resultado = probar_conexion(password)
+resultado = probar_conexion(user,password)
 if(resultado == "¡Conexión exitosa a la base de datos!"):
     # Ruta del archivo YAML
     directorio_ibcapp = directorio_base.parent
@@ -60,6 +61,7 @@ if(resultado == "¡Conexión exitosa a la base de datos!"):
 
     # Modificar o agregar datos
     datos['databasePassword'] = f'{password}'
+    datos['databaseUsername'] = f'{user}'
     # Guardar los cambios en el archivo YAML
     with open(ruta_del_archivo_yaml, 'w') as archivo_yaml:
         yaml.dump(datos, archivo_yaml, default_flow_style=False)
