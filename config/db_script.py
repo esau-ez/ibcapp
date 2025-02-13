@@ -14,10 +14,10 @@ with open(ruta_del_archivo_yaml, 'r') as archivo_yaml:
 yaml_password = datos['databasePassword']
 yaml_username = datos['databaseUsername']
 config = {
-    'host': '109.106.246.151',
+    'host': '92.113.22.15',
     'user': f'{str(yaml_username)}',
     'password': f'{str(yaml_password)}',
-    'database': 'u199560923_ibcapp',
+    'database': 'u555377578_ibcapp',
 }
 def consulta(query):
     conexion = mysql.connector.connect(**config)
