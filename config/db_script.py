@@ -12,9 +12,10 @@ with open(ruta_del_archivo_yaml, 'r') as archivo_yaml:
 
 # Modificar o agregar datos
 yaml_password = datos['databasePassword']
+yaml_username = datos['databaseUsername']
 config = {
     'host': '109.106.246.151',
-    'user': 'u199560923_ibcapp',
+    'user': f'{str(yaml_username)}',
     'password': f'{str(yaml_password)}',
     'database': 'u199560923_ibcapp',
 }
